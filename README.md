@@ -10,19 +10,24 @@ Frontend público para exibir pesquisas de satisfação e coletar votos. Constru
 ```bash
 npm install
 ```
-2) Ambiente de desenvolvimento com HMR:
+2) (Opcional) Configurar a URL da API no `.env`:
+```bash
+echo "VITE_API_BASE_URL=http://localhost:8080" > .env
+```
+Se não informado, as chamadas usam o mesmo host/porta do front.
+3) Ambiente de desenvolvimento com HMR:
 ```bash
 npm run dev
 ```
-3) Build de produção:
+4) Build de produção:
 ```bash
 npm run build
 ```
-4) Preview do build:
+5) Preview do build:
 ```bash
 npm run preview
 ```
-5) Lint:
+6) Lint:
 ```bash
 npm run lint
 ```
