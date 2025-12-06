@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "vercel-build": "npm run build",
+    "start": "vite preview --host --port 4173",
     "lint": "eslint .",
     "preview": "vite preview"
   },

@@ -116,12 +116,30 @@
   border: 1px solid var(--gray-300);
   border-radius: 12px;
   background: #f9fdfb;
+  transition: border-color 120ms ease, background-color 120ms ease;
+}
+
+.question-block.missing {
+  border-color: var(--error-700);
+  background: #fff6f5;
 }
 
 .question-title {
   margin: 0 0 10px;
   font-weight: 700;
   color: var(--gray-800);
+}
+
+.question-warning {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--error-700);
+  vertical-align: middle;
 }
 
 .option {
@@ -231,4 +249,91 @@ button:not(:disabled):hover {
 .not-found-card h1 {
   margin: 6px 0 0;
   color: var(--gray-800);
+}
+
+.thank-you-page {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.thank-you-card {
+  background: var(--bg-card);
+  border: 1px solid var(--gray-300);
+  border-radius: 16px;
+  padding: 32px 36px;
+  max-width: 540px;
+  text-align: center;
+  box-shadow: 0 14px 36px rgba(5, 31, 17, 0.12);
+}
+
+.thank-you-card h1 {
+  margin: 8px 0 12px;
+  color: var(--gray-800);
+}
+
+.thank-you-card .lede {
+  margin: 0;
+  color: var(--gray-500);
+}
+
+.thank-you-actions {
+  margin-top: 16px;
+}
+
+.thank-you-actions button {
+  width: 100%;
+  max-width: 260px;
+}
+
+.skeleton-questions .question-block {
+  background: #f6faf7;
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 1.2s infinite;
+}
+
+.skeleton-line {
+  height: 12px;
+  border-radius: 8px;
+  background: var(--gray-100);
+  margin-bottom: 10px;
+}
+
+.skeleton-line.short {
+  width: 50%;
+}
+
+.skeleton-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid var(--gray-300);
+}
+
+.skeleton-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--gray-100);
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
 }
